@@ -348,55 +348,56 @@
           </div>
 
           <form
-            name="agoro-contact"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            action="/"
-          >
-            <input type="hidden" name="form-name" value="agoro-contact">
-            <p class="hidden-field">
-              <label>Do not fill this out: <input name="bot-field"></label>
-            </p>
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="b5decb60-69d8-4ddb-94a4-a31eab83961b">
 
-            <div class="field">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                autocomplete="name"
-                maxlength="80"
-                required
-              >
-            </div>
+  <!-- Optional: Custom email subject -->
+  <input type="hidden" name="subject" value="New message from Agoro Likwenyo website">
 
-            <div class="field">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                autocomplete="email"
-                maxlength="254"
-                required
-              >
-            </div>
+  <!-- Honeypot spam protection (keep this hidden) -->
+  <input type="checkbox" name="botcheck" class="hidden-field" style="display: none;">
 
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                maxlength="2000"
-                required
-              ></textarea>
-            </div>
+  <div class="field">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      autocomplete="name"
+      maxlength="80"
+      required
+    >
+  </div>
 
-            <button type="submit" class="button button-primary">Send Message</button>
-            <p class="form-note">Your message will be handled through the site's configured form service.</p>
-          </form>
+  <div class="field">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      autocomplete="email"
+      maxlength="254"
+      required
+    >
+  </div>
+
+  <div class="field">
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      maxlength="2000"
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="button button-primary">Send Message</button>
+  <p class="form-note">Your message will be sent directly to the team.</p>
+</form>
         </div>
       </div>
     </section>
